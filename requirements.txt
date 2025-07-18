@@ -3,3 +3,4 @@ mysql-connector-python==8.0.33
 torch==2.7.1
 torchvision==0.22.1
 Pillow==10.2.0
+gunicorn
