@@ -1,5 +1,5 @@
 Flask==2.3.2
 mysql-connector-python==8.0.33
-torch==2.5.1
+torch==2.7.1
 torchvision==0.22.1
-Pillow
+Pillow==10.2.0
