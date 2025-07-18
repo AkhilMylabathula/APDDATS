@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Automated Plant Disease Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+  <!-- Image on the Right -->
+  <div style="max-width: 9%;">
+    <img src="static/lo (2).png" style="max-width: 250px; height: 150px;">
+  </div>
+  
+  <!-- Heading in the Center -->
+  <div style="flex-grow: 1;">
+    <h1>Automated Plant Disease Detection and Treatment System</h1>
+  </div>
+
+  
+  
+</div>
+
+<div class="neo">
+    <div class="upload-section">
+      <h2>📤 Upload Image</h2>
+      <form method="POST" action="/predict" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <button type="submit">Upload & Predict</button>
+      </form>
+    </div></div>
+
+<div class="neo">
+    <div class="webcam-section">
+      <h2>📷 Capture from Webcam</h2>
+      <video id="video" autoplay></video>
+      <button id="capture">Capture</button>
+      <form id="webcam-form" method="POST" action="/predict" enctype="multipart/form-data">
+        <input type="file" name="file" id="webcam-file" hidden>
+      </form>
+    </div></div>
+
+    {% if result %}
+    <div class="neo">
+    <div class="result-section">
+      <h2>✅ Prediction Result</h2>
+      <img src="{{ image_path }}" alt="Leaf" class="result-img">
+      <p><strong>Disease:</strong> {{ result }}</p>
+      <p><strong>Confidence:</strong> {{ confidence }}</p>
+      <p><strong>Diagnosis:</strong> {{ diagnosis }}</p>
+      <p><strong>Treatment:</strong> {{ treatment }}</p>
+    </div></div>
+    {% endif %}
+  </div>
+
+  <script>
+  const video = document.getElementById('video');
+  const captureBtn = document.getElementById('capture');
+
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(stream => video.srcObject = stream)
+    .catch(err => console.error("Camera error:", err));
+
+  captureBtn.addEventListener('click', () => {
+    const canvas = document.createElement('canvas');
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    canvas.getContext('2d').drawImage(video, 0, 0);
+
+    canvas.toBlob(blob => {
+      const formData = new FormData();
+      formData.append("file", blob, "webcam.jpg");
+
+      fetch("/predict", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.text())
+      .then(html => {
+        document.open();
+        document.write(html);
+        document.close();
+      })
+      .catch(error => {
+        console.error("Upload failed:", error);
+      });
+    }, 'image/jpeg');
+  });
+</script>
+</body>
+</html>

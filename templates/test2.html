@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plant Detection</title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="static/style (1).css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <img src="static/lo (2).png" style="height: 100px;" />
+    <div class="logo">
+      <h2>Automated Plant Disease Detection And Treatment System</h2>
+    </div>
+    
+    <nav>
+      <ul id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#diseases">Diseases</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div style="margin-top: 149px;" id="home">
+    <marquee class="marq">Welcome to the Automated Disease Plant Detection and Treatment System 🌱</marquee>
+  </div>
+  <br />
+
+  <center><a href="{{ url_for('next_page') }}" class="predict-btn">🌿 Predict Disease</a></center>
+ 
+  <!-- Disease Example Images Section -->
+<!-- Image Slider Section -->
+<section class="image-slider" style="margin: 40px 0;">
+  <div class="slick-images">
+    <div><img src="https://agritechdigest.com/wp-content/uploads/2025/04/AI-Crop-Disease-Management.webp" alt="Sample 1" /></div>
+    <div><img src="https://img.freepik.com/premium-photo/innovative-farmer-utilizing-smartphone-app-with-augmented-reality-plant-disease-detection_38013-16549.jpg" alt="Sample 2" /></div>
+    <div><img src="https://miro.medium.com/v2/resize:fit:1400/1*CUjbLtX-FeWfT6D06ebziA.jpeg" alt="Sample 3" /></div>
+  </div>
+</section>
+
+
+
+
+  <section class="about-section" id="about">
+  <div class="about-wrapper">
+    <div class="about-img">
+      <img src="https://img.freepik.com/premium-photo/precision-agriculture-farmer-embraces-technology-realtime-plant-disease-scanning-data-analytics_38013-21185.jpg" alt="About Image" />
+    </div>
+    <div class="about-text">
+      <h2>About The Website</h2>
+      <p>
+        This website is designed to help farmers and plant
+        enthusiasts quickly and accurately identify plant diseases using
+        <strong>Artificial Intelligence</strong>. Our mission is to bridge the
+        gap between agriculture and technology by providing a simple platform.
+      </p>
+      <ul>
+        <li> Upload images of infected leaves or capture them via webcam</li>
+        <li> Get instant disease predictions using AI</li>
+        <li> Access treatment advice and preventive measures</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <br />
+  <marquee class="marq">⚠ Detect Plant Diseases Early - Protect Your Crops!</marquee>
+
+  <!--<section id="diseases" class="diseases">
+    <h2><center>Diseases</center></h2>
+    <div class="disease-slider">
+      <div class="disease-slide" id="neo">
+        <img src="https://i.pinimg.com/736x/b6/a0/b8/b6a0b8a12a1a103801134798007c297f.jpg" alt="Powdery Mildew" />
+        <div class="slide-text">
+          <h3>Powdery Mildew</h3>
+          <p><b>Powdery Mildew</b> is a common fungal disease that affects many plants, including mango trees. It appears as white or gray powdery spots on leaves, stems, and buds. </p>
+        </div>
+      </div>
+      <br />
+      <div class="disease-slide" id="neo">
+        <img src=/>
+        <div class="slide-text">
+          <h3>Bacterial Canker</h3>
+          <p>Leaf spot appears as brown or black patches on foliage...</p>
+        </div>
+      </div>
+      <br />
+      <div class="disease-slide" id="neo">
+        <img src="https://i.pinimg.com/736x/42/6e/3a/426e3ac933a5d030ac378a0d9015779b.jpg" alt="Anthracnose" />
+        
+        <div class="slide-text">
+          <h3>Anthracnose</h3>
+          <p>Leaf blight. Yellowing and dying. Apply copper-based fungicides.</p>
+        </div>
+    </div>
+    </div>
+  </section>-->
+  <section id="diseases" class="diseases">
+    <h2><center>Diseases</center></h2>
+    <div class="disease-slider">
+  <div class="disease-card" id="neo">
+  <img src="https://i.pinimg.com/736x/b6/a0/b8/b6a0b8a12a1a103801134798007c297f.jpg" alt="Disease Image" />
+  <div class="disease-content">
+    <h3>Powdery Mildew</h3>
+    <p>
+      <strong>Powdery Mildew</strong> is a common fungal disease that affects
+      many plants, including mango trees. It appears as white or gray powdery
+      spots on leaves, stems, and buds.
+    </p>
+    <a href="https://en.wikipedia.org/wiki/Powdery_mildew" class="learn-more">Learn More →</a>
+  </div>
+</div>
+<div class="disease-card" id="neo">
+  <img src="https://i.pinimg.com/736x/f5/f3/15/f5f3159135b0baddca836fd8606f5b70.jpg" alt="Bacterial Canker"  />
+  <div class="disease-content">
+    <h3>Bacterial Canker</h3>
+    <p>
+      <strong>Bacterial Canker</strong> is a common Bacterial disease that affects
+      many plants.Leaf spot appears as brown or black patches on foliage...
+    </p>
+    <a href="https://www.planetnatural.com/pest-problem-solver/plant-disease/bacterial-canker/" class="learn-more">Learn More →</a>
+  </div>
+</div>
+  <div class="disease-card" id="neo">
+  <img src="https://i.pinimg.com/736x/42/6e/3a/426e3ac933a5d030ac378a0d9015779b.jpg" alt="Anthracnose"  />
+  <div class="disease-content">
+    <h3>Anthracnose</h3>
+    <p>
+      <strong>Anthracnose</strong> is a general term for a group of fungal diseases characterized by the appearance of dark, sunken lesions or spots, blights, and cankers.
+    </p>
+    <a href="https://microbenotes.com/anthracnose/" class="learn-more">Learn More →</a>
+  </div>
+</div>
+</div>
+  </section>
+
+<section class="contact" id="contact">
+  <h2><center>Feedback Form </center></h2>
+  <br />
+  <form class="contact-form" id="contactForm">
+    <label for="email"><b>Email Address:</b></label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="phone"><b>Phone Number:</b></label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+    <label for="message"><b>Description:</b></label>
+    <textarea id="message" name="message" placeholder="Any issuess" rows="6" required></textarea>
+
+    <button type="submit">Submit</button><BR>
+  </form>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Plant Detection. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+  <script src="static/script (1).js"></script>
+</body>
+</html>
