@@ -1,16 +1,17 @@
+/* Universal Styles */
 * {
-  font-family: 'poppins',sans-serif;
+  font-family: 'poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-
+/* Header */
 header {
   background-color: #3F7D58;
   color: white;
-  padding: 20px 20px;
+  padding: 20px; /* Reduced vertical padding for smaller screens */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,7 +19,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -28,20 +29,20 @@ header {
 }
 
 .predict-btn-container {
-  margin-top: 9px;
+  margin-top: 0; /* Adjust margin for smaller screens */
   text-align: center;
 }
 
 .predict-btn {
   background-color: #3F7D58;
   color: white;
-  padding: 15px 30px;
-  font-size: 20px;
+  padding: 12px 25px; /* Slightly smaller padding for mobile buttons */
+  font-size: 18px; /* Slightly smaller font size */
   border: none;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
 }
 
@@ -49,201 +50,8 @@ header {
   background-color: #326634;
   cursor: pointer;
 }
-.slick-images img {
-  width: 100%;
-  height: 600px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-.slick-images {
-  max-width: 100%;
-  margin: auto;
-}
-.about-section {
-  padding: 50px 20px;
-  background: #f8fff4;
-  color: #2e2e2e;
-}
 
-.about-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1100px;
-  margin: auto;
-  flex-wrap: wrap;
-}
-
-.about-img img {
-  width: 100%;
-  max-width: 500px;
-  height: 300px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.about-text {
-  flex: 1;
-  min-width: 280px;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.about-text h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
-  color: #245501;
-}
-
-.about-text ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 15px;
-}
-
-.about-text ul li {
-  margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
-}
-
-.about-text ul li::before {
-  content: "*";
-  position: absolute;
-  left: 0;
-}
-
-marquee.marq {
-  background-color: #c5f7b0;
-  padding: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-}
-
-.diseases {
-  background-color: #f0f7ed;
-  padding: 40px 0;
-  
-}
-
-.disease-slider {
-  width: 90%;
-  margin: auto;
-}
-/*
-.disease-slide {
-  display: flex;
-  flex-direction: row; 
-  align-items: center;
-  justify-content: flex-start;
-  gap: 30px;
-  padding: 30px;
-  margin-bottom: 30px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap; 
-}
-
-.disease-slide img {
-  width: 300px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  flex-shrink: 0;
-  object-fit: cover;
-}
-*/
-.disease-card {
-  display: flex;
-  background: #f9f9f9;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-  margin: 20px 0;
-  max-width: 100%;
-}
-
-.disease-card:hover {
-  transform: translateY(-5px);
-}
-
-.disease-card img {
-  width: 250px;
-  height: auto;
-  object-fit: cover;
-}
-
-.disease-content {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  object-fit: cover;
-}
-
-.disease-content h3 {
-  color: #1c6832;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.disease-content p {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.5;
-  margin-bottom: 15px;
-}
-
-.learn-more {
-  color: #006e3c;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.learn-more:hover {
-  color: #00b36b;
-}
-
-.slide-text {
-  flex: 1;
-  max-width: 600px;
-  text-align: left;
-  float: right;
-  padding: 0;
-  margin-top: 1px;
-
-}
-
-.slide-text h3 {
-  font-size: 24px;
-  color: #2c332a;
-  margin-bottom: 10px;
-}
-
-.slide-text p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-}
-@media (max-width: 768px) {
-  .disease-slide {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .slide-text {
-    text-align: center;
-    max-width: 100%;
-  }
-}
-
-
-
+/* Navigation (for desktop - will be hidden on mobile) */
 nav ul {
   display: flex;
   list-style: none;
@@ -267,18 +75,173 @@ nav ul li a:hover {
   color: black;
 }
 
+/* Slick Images (Hero/Carousel) */
+.slick-images img {
+  width: 100%;
+  height: 400px; /* Reduced height for mobile screens */
+  object-fit: cover;
+  border-radius: 12px;
+}
+.slick-images {
+  max-width: 100%;
+  margin: auto;
+}
+
+/* Marquee */
+marquee.marq {
+  background-color: #c5f7b0;
+  padding: 10px 15px; /* Adjusted padding */
+  font-size: 16px; /* Slightly smaller font size */
+  font-weight: bold;
+  color: #333;
+}
+
+/* About Section */
+.about-section {
+  padding: 40px 20px; /* Adjusted padding */
+  background: #f8fff4;
+  color: #2e2e2e;
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px; /* Reduced gap */
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap; /* Already good for wrapping */
+}
+
+.about-img {
+  text-align: center; /* Center image on small screens */
+  width: 100%; /* Ensure image wrapper takes full width */
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 400px; /* Smaller max-width for mobile */
+  height: 250px; /* Adjusted height */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  flex: 1;
+  min-width: unset; /* Remove min-width for mobile */
+  font-size: 15px; /* Slightly smaller font size */
+  line-height: 1.5;
+  text-align: center; /* Center text on small screens */
+}
+
+.about-text h2 {
+  font-size: 28px; /* Slightly smaller font size */
+  margin-bottom: 10px;
+  color: #245501;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  text-align: left; /* Keep list items left-aligned */
+  max-width: 300px; /* constrain width for centered lists */
+  margin: 15px auto 0;
+}
+
+.about-text ul li {
+  margin-bottom: 8px; /* Reduced margin */
+  padding-left: 20px;
+  position: relative;
+}
+
+.about-text ul li::before {
+  content: "*";
+  position: absolute;
+  left: 0;
+}
+
+/* Diseases Section */
+.diseases {
+  background-color: #f0f7ed;
+  padding: 30px 0; /* Adjusted padding */
+}
+
+.disease-slider {
+  width: 95%; /* Increased width for mobile */
+  margin: auto;
+}
+
+.disease-card {
+  display: flex;
+  flex-direction: column; /* Stack image and content vertically on mobile */
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  margin: 15px 0; /* Adjusted margin */
+  max-width: 100%;
+  overflow: hidden; /* Ensure content doesn't spill */
+}
+
+.disease-card:hover {
+  transform: translateY(-5px);
+}
+
+.disease-card img {
+  width: 100%; /* Image takes full width of card */
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover;
+  border-radius: 16px 16px 0 0; /* Rounded corners only on top */
+}
+
+.disease-content {
+  padding: 15px; /* Adjusted padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1; /* Allow content to grow */
+}
+
+.disease-content h3 {
+  color: #1c6832;
+  font-size: 1.3rem; /* Adjusted font size */
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.disease-content p {
+  font-size: 0.9rem; /* Adjusted font size */
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.learn-more {
+  color: #006e3c;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.learn-more:hover {
+  color: #00b36b;
+}
+
+/* Contact Form */
 .contact-form {
-  max-width: 600px;
+  max-width: 90%; /* Increased max-width for better mobile fit */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px; /* Adjusted gap */
+  padding: 20px 0; /* Add some padding to the section */
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 12px;
-  font-size: 16px;
+  padding: 10px; /* Slightly smaller padding */
+  font-size: 15px; /* Slightly smaller font size */
   border: 1px solid #ccc;
   border-radius: 8px;
 }
@@ -286,8 +249,8 @@ nav ul li a:hover {
 .contact-form button {
   background-color: #3b9f40;
   color: white;
-  padding: 12px;
-  font-size: 16px;
+  padding: 10px; /* Slightly smaller padding */
+  font-size: 15px; /* Slightly smaller font size */
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -298,19 +261,256 @@ nav ul li a:hover {
   background-color: #1b5e20;
 }
 
+/* Footer */
 footer {
   background: rgb(88, 156, 88);
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 15px; /* Adjusted padding */
+  font-size: 14px; /* Slightly smaller font size */
 }
-#neo{
+
+/* Specific Element Styling */
+#neo {
   border: 4px solid black;
-  max-width: 45%;
+  max-width: 90%; /* Adjusted for mobile */
   margin: auto;
   background-color: #ffffff;
   border-radius: 6px;
-  padding: auto;
+  padding: 15px; /* Adjusted padding */
   margin-top: 20px;
   box-shadow: 5px 5px 5px;
+}
+
+/* ==================================== */
+/* Media Queries for Mobile Responsiveness */
+/* ==================================== */
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column; /* Stack logo and button vertically */
+    padding: 15px 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Add space below logo */
+  }
+
+  .predict-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  nav {
+    display: none; /* Hide desktop navigation on small screens */
+  }
+
+  .slick-images img {
+    height: 250px; /* Even smaller height for very small screens */
+  }
+
+  .about-wrapper {
+    flex-direction: column; /* Stack image and text vertically */
+    gap: 20px;
+    padding: 0 10px; /* More padding on the sides */
+  }
+
+  .about-img img {
+    max-width: 100%; /* Ensure image fits container */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-text ul {
+    margin: 10px auto 0;
+  }
+
+  .disease-card {
+    flex-direction: column; /* Ensure vertical stack */
+    margin: 10px auto;
+  }
+
+  .disease-card img {
+    width: 100%;
+    height: 180px; /* Adjusted height for small screens */
+  }
+
+  .disease-content {
+    padding: 10px; /* Reduced padding */
+  }
+
+  .disease-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .disease-content p {
+    font-size: 0.85rem;
+  }
+
+  .contact-form {
+    padding: 15px 10px;
+  }
+
+  #neo {
+    padding: 10px;
+    margin-top: 15px;
+    max-width: 95%; /* Even wider for tiny screens */
+  }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  /* This existing rule is still good */
+  /* .disease-slide (if you re-enable it) */
+
+  .header {
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .predict-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  /* Make navigation a burger menu if you have one, or hide it. */
+  /* For now, it's just hidden below 600px, but you could add a burger here. */
+
+  .slick-images img {
+    height: 350px;
+  }
+
+  .about-wrapper {
+    flex-direction: column; /* Stack items vertically */
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .about-img {
+    text-align: center;
+  }
+
+  .about-img img {
+    max-width: 80%; /* Limit width slightly on tablets */
+    height: auto;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 30px;
+  }
+
+  .about-text ul {
+    text-align: left;
+    margin: 15px auto 0; /* Center the list itself if text-align is center */
+  }
+
+  .disease-card {
+    flex-direction: column; /* Ensure vertical layout */
+    margin: 15px auto;
+  }
+
+  .disease-card img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .disease-content {
+    padding: 15px;
+  }
+
+  .disease-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .disease-content p {
+    font-size: 0.9rem;
+  }
+
+  #neo {
+    max-width: 70%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) - Optional adjustments */
+@media (min-width: 992px) {
+  header {
+    padding: 20px 50px; /* More padding for larger screens */
+  }
+
+  .predict-btn {
+    padding: 15px 30px;
+    font-size: 20px;
+  }
+
+  .slick-images img {
+    height: 600px; /* Restore original height */
+  }
+
+  .about-section {
+    padding: 50px 50px;
+  }
+
+  .about-wrapper {
+    flex-direction: row; /* Ensure side-by-side layout */
+    gap: 40px;
+  }
+
+  .about-img {
+    text-align: left; /* Reset text-align */
+    width: auto;
+  }
+
+  .about-img img {
+    max-width: 500px;
+    height: 300px;
+  }
+
+  .about-text {
+    text-align: left; /* Reset text-align */
+    font-size: 16px;
+    min-width: 280px; /* Restore min-width */
+  }
+
+  .about-text h2 {
+    font-size: 32px;
+  }
+
+  .about-text ul {
+    margin: 15px 0 0; /* Remove auto margins */
+  }
+
+  .disease-slider {
+    width: 90%;
+  }
+
+  .disease-card {
+    flex-direction: row; /* Back to side-by-side for desktop */
+    margin: 20px auto;
+    max-width: 100%; /* Ensure it can expand */
+  }
+
+  .disease-card img {
+    width: 250px; /* Restore fixed width for desktop */
+    height: auto; /* Allow height to adjust based on content */
+    border-radius: 16px 0 0 16px; /* Rounded corners only on left */
+  }
+
+  .contact-form {
+    max-width: 600px; /* Restore original max-width */
+  }
+
+  #neo {
+    max-width: 45%; /* Restore original max-width */
+  }
 }
