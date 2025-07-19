@@ -74,6 +74,8 @@ def predict():
     # """
     # cursor.execute(insert_query, (predicted_class, confidence, filepath))
     # db.commit()
+    if os.path.exists(temp_path):
+        os.remove(temp_path)
 
     return render_template('test.html',
                            result=predicted_class,
