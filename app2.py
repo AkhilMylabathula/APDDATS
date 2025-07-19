@@ -1,5 +1,6 @@
 # app2.py
 import os
+import requests
 from flask import Flask, request, render_template
 from plant_disease_model import predict_image
 import mysql.connector
