@@ -83,3 +83,48 @@ video {
   margin-top: 20px;
   box-shadow: 5px 5px 5px;
 }
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: center;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .upload-section,
+  .webcam-section,
+  .result-section {
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .neo {
+    padding: 1rem;
+    box-shadow: none;
+    border-width: 2px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  video,
+  .result-img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
