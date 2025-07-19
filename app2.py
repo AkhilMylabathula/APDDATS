@@ -55,9 +55,12 @@ def predict():
     # Save uploaded/captured image
     upload_result = cloudinary.uploader.upload(file)
     image_url = upload_result['secure_url']
-
+    temp_path = "temp.jpg"
+    response = requests.get(image_url)
+    with open(temp_path, "wb") as f:
+        f.write(response.content)
     # Predict using model
-    result = predict_image(image_url)
+    result = predict_image(temp_path)
     predicted_class = result['class']
     confidence = f"{result['confidence'] * 100:.2f}%"
     diagnosis = result['diagnosis']
